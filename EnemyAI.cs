@@ -9,10 +9,9 @@ public class EnemyAI : MonoBehaviour
     public int enemyCoordinateX;
     public int enemyCoordinateY;
 
-    bool move = false;
     int oppBackBorderX = 1;
     int oppFrontBorderX = 4;
-    
+
     public float moveTimer;
     float setTimer;
     void Start()
@@ -20,10 +19,10 @@ public class EnemyAI : MonoBehaviour
         setTimer = moveTimer;
     }
 
-  
+
     void Update()
     {
-        if(moveTimer > 0)
+        if (moveTimer > 0)
         {
             moveTimer = moveTimer -= Time.deltaTime;
         }
@@ -33,7 +32,7 @@ public class EnemyAI : MonoBehaviour
             moveTimer = setTimer;
         }
 
-        
+
     }
     string chooseDirection()
     {
@@ -69,14 +68,14 @@ public class EnemyAI : MonoBehaviour
             else
             {
                 validDirection = true;
-             
+
             }
         }
-       
+
 
         return choice;
-        
-   }
+
+    }
     void enemyMovement(string Direction)
     {
         if (Direction == "up")
@@ -101,3 +100,4 @@ public class EnemyAI : MonoBehaviour
         }
     }
 }
+    //void enemyAttack

@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class EnemyObject : MonoBehaviour
 {
-    public int enemyHealth;
-    public int enemyAttack;
-    public int enemySpecial;
-    public int enemySpeed;
+    public float enemyMaxHealth;
+    public float enemyHealth;
+    public float enemyAttack;
+    public float enemySpecial;
+    public float enemySpeed;
 
     public EnemyData newStats;
-    private Collision2D col;
 
     void Start()
     {
@@ -26,6 +26,7 @@ public class EnemyObject : MonoBehaviour
 
     public void AssignEnemyData(EnemyData enemyData)
     {
+        this.enemyMaxHealth = enemyData.enemyMaxHealth;
         this.enemyHealth = enemyData.enemyHealth;
         this.enemyAttack = enemyData.enemyAttack;
         this.enemySpecial = enemyData.enemySpecial;
